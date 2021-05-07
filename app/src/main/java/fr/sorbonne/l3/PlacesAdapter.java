@@ -46,14 +46,12 @@ public class PlacesAdapter extends ArrayAdapter<Place> {
         Place place = getItem(position);
 
         //il ne reste plus qu'à remplir notre vue
-        System.out.println("geo1:" + place.getLatitude() + "," + place.getLongitude());
         viewHolder.getTextViewLatitude().setText(place.getLatitude());
         viewHolder.getTextViewLongitude().setText(place.getLongitude());
 
         viewHolder.getButtonMaps().setOnClickListener(v -> {
             // Creates an Intent that will load a map of San Francisco
-            Uri gmmIntentUri = Uri.parse("geo:" + place.getLongitude() + "," + place.getLatitude());
-            System.out.println("geo:" + place.getLatitude() + "," + place.getLongitude());
+            Uri gmmIntentUri = Uri.parse("geo:" + place.getLatitude() + "," + place.getLongitude());
             Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
             mapIntent.setPackage("com.google.android.apps.maps");
             context.startActivity(mapIntent);
