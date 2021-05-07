@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".AddPlaceActivity">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -15,16 +14,26 @@
         tools:layout_editor_absoluteY="1dp"
         tools:ignore="MissingConstraints">
 
+        <EditText
+            android:id="@+id/longitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/longitude" />
+
+        <EditText
+            android:id="@+id/latitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/latitude" />
+
         <Button
-            android:id="@+id/addPlace"
+            android:id="@+id/addPlaceDB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/ajouter_lieu" />
-
-        <Button
-            android:id="@+id/showPlaces"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Afficher liste des lieux" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ExercicePratique</string>
+    <string name="ajouter_lieu">Ajouter lieu</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="voir_dans_maps">Voir dans Maps</string>
 </resources>
