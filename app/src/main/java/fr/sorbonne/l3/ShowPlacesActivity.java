@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
+import fr.sorbonne.l3.database.Data;
 import fr.sorbonne.l3.database.Place;
 
 public class ShowPlacesActivity extends AppCompatActivity {
@@ -22,6 +23,7 @@ public class ShowPlacesActivity extends AppCompatActivity {
 
     private void initialise() {
         listPlaces = (ListView) findViewById(R.id.placesList);
-        ArrayAdapter<Place> listViewArrayAdapter = new ArrayAdapter<Place>();
+        PlacesAdapter placesAdapter = new PlacesAdapter(ShowPlacesActivity.this, Data.places);
+        listPlaces.setAdapter(placesAdapter);
     }
 }
