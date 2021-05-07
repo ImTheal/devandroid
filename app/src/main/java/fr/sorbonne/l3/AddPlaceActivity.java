@@ -28,8 +28,8 @@ public class AddPlaceActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText editTextLongitude = (EditText) findViewById(R.id.longitude);
                 EditText editTextLatitude = (EditText) findViewById(R.id.latitude);
-                String latitude = editTextLatitude.getText().toString();
-                String longitude = editTextLongitude.getText().toString();
+                float latitude = Float.parseFloat(editTextLatitude.getText().toString());
+                float longitude = Float.parseFloat(editTextLongitude.getText().toString());
                 editTextLatitude.setText("");
                 editTextLongitude.setText("");
                 Data.places.add(new Place(longitude, latitude));

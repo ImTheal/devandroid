@@ -2,20 +2,20 @@ package fr.sorbonne.l3.database;
 
 public class Place {
 
-    private String longitude;
+    private float longitude;
 
-    private String latitude;
+    private float latitude;
 
-    public Place(String longitude, String  latitude){
+    public Place(float longitude, float  latitude){
         this.longitude = longitude;
         this.latitude = latitude;
     }
 
-    public String getLongitude() {
+    public float getLongitude() {
         return longitude;
     }
 
-    public String getLatitude() {
+    public float getLatitude() {
         return latitude;
     }
 }
